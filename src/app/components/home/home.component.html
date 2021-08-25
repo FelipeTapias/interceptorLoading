@@ -1,0 +1,22 @@
+<div class="container" *ngIf="data">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Capital</th>
+        <th scope="col">Moneda</th>
+        <th scope="col">Simbolo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let pais of data; let i = index">
+        <th scope="row">{{ i+1 }}</th>
+        <td>{{ pais.name }}</td>
+        <td>{{ pais.capital }}</td>
+        <td>{{ pais.currencies[0].name }}</td>
+        <td>{{ pais.currencies[0].symbol }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
